@@ -1,1 +1,3 @@
 20230918	00:14:28	4201da77-6cc4-4694-8db9-0a8e1beb783a	TypeError : fsPromises.readFie is not a function
+20230918	09:58:46	90db9dba-05f2-455e-88fc-e5949ae69f9f	Error : not allowed by CORS
+20230918	12:15:22	4fa4097c-fe50-4cf8-9089-ea070d453c88	Error : ENOENT: no such file or directory, stat '/home/ibrahimhz/Play/NodeJS/Practice101/tut6/views/subdir/test.html'
