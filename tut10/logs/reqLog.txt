@@ -267,3 +267,6 @@
 20230918	20:02:03	835fe2c7-8075-49a8-a53f-b4918c185e7f	GET	undefined	/logout
 20230918	20:02:06	d03f7ba0-836f-45d3-a5dc-04a118c96ad3	GET	undefined	/refresh
 20230918	20:02:08	a66dbb79-8460-48c9-8a9f-2e3fd313d91a	POST	undefined	/auth
+20230920	11:02:25	24c9d082-7af5-43fa-a006-0f1c7d51617c	GET	undefined	/
+20230920	11:02:26	576d251c-c313-4ac8-860a-3acb814a3480	GET	undefined	/css/style.css
+20230920	11:02:26	8ac67ada-6a20-4ef2-874f-4c453f6533a8	GET	undefined	/favicon.ico

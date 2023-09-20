@@ -2,18 +2,24 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const cors = require('cors');
+const cookieParser = require('cookie-parser');
 
 const corsOptions = require('./config/corsOptions');
 
 const { logger } = require('./middleware/logEvents');
 const errorHandler = require('./middleware/errorHandler');
 const verifyJWT = require('./middleware/verifyJWT');
-const cookieParser = require('cookie-parser');
+const credentials = require('./middleware/credentials'); 
+
 
 const PORT = process.env.PORT || 3500;
 
 // custom middlware logger
 app.use(logger);
+
+// Handle options credentials check - before CORS 
+// and fetch cookies credentials requirements
+app.use(credentials);
 
 // middlwares for corsOptions
 app.use(cors(corsOptions));
