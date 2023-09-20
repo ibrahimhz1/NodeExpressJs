@@ -11,7 +11,6 @@ const errorHandler = require('./middleware/errorHandler');
 const verifyJWT = require('./middleware/verifyJWT');
 const credentials = require('./middleware/credentials'); 
 
-
 const PORT = process.env.PORT || 3500;
 
 // custom middlware logger
