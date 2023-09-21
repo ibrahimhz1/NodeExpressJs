@@ -1,5 +1,5 @@
 const { format } = require('date-fns');
-const { v4: uuid } = require('uuid');
+const { v4: uuid } = require('uuid'); // uuid as v4
 
 const fs = require('fs');
 const fsPromises = require('fs').promises;

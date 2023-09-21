@@ -304,3 +304,5 @@
 20230920	22:18:54	142e2624-3f15-4fa2-8d4a-f9ac4fdbebae	POST	undefined	/auth
 20230920	22:19:04	f4c2a5bb-f06d-4306-8470-6c5ea8637e2f	POST	undefined	/auth
 20230920	22:19:12	17fd4d61-3f27-4c21-a948-937843f18b7a	POST	undefined	/employees
+20230921	20:13:49	ea379e88-37ce-4576-a75e-b8b7f83922fe	POST	undefined	/register
+20230921	20:14:59	7df46741-a592-401e-a5de-50bf492c6016	POST	undefined	/register

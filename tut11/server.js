@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const express = require('express');
 const app = express();
 const path = require('path');
@@ -9,9 +11,16 @@ const corsOptions = require('./config/corsOptions');
 const { logger } = require('./middleware/logEvents');
 const errorHandler = require('./middleware/errorHandler');
 const verifyJWT = require('./middleware/verifyJWT');
-const credentials = require('./middleware/credentials'); 
+const credentials = require('./middleware/credentials');
+
+const mongoose = require('mongoose');
+const connectDB = require('./config/dbConn');
 
 const PORT = process.env.PORT || 3500;
+
+
+// connect to mongodb
+connectDB();
 
 // custom middlware logger
 app.use(logger);
@@ -51,13 +60,15 @@ app.all('*', (req, res) => {
     if (req.accepts('html')) {
         res.sendFile(path.join(__dirname, 'views', '404.html'));
     }
-    else if (req.accepts('json')) { 
+    else if (req.accepts('json')) {
         res.json({ error: "404 not found" });
-    }else{
+    } else {
         res.type('txt').send("404 not found");
     }
 });
 
 app.use(errorHandler);
-
-app.listen(PORT, () => console.log(`Server running on port : ${PORT}`));
+mongoose.connection.once('open', () => {
+    console.log('Connected to mongodb');
+    app.listen(PORT, () => console.log(`Server running on port : ${PORT}`));
+});
